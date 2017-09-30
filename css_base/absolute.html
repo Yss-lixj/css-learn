@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!--
+  absolute与float相同之处：
+      1. 包裹性： absolute使得div根据内容大小调整
+      2. 破坏性： 脱离文档流
+ -->
+
+    <style>
+
+      /*包裹性演示*/
+      #container1 .box1 {
+        padding: 10px;
+        background-color: #f0f0f0;
+        position: absolute;
+        border: 1px solid red;
+      }
+      /*破坏性演示*/
+      #container2 .box2 {
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid red;
+      }
+      #container2 img {
+        position: absolute;
+      }
+
+      /*absolute位置跟随性演示： 在设置了absolute之后，我们的这个元素如果在某个元素之前的话
+      就会居高临下，好像是浮在他后面的元素上面，后面的元素会占据这个元素本来的位置，
+      但是如果它是在后面的话，设置了position:absolute的话，就就会紧跟在他前面的元素后面，这就是跟随性。*/
+      #container3 img:nth-child(2) {
+        position: absolute;
+      }
+
+    </style>
+
+  </body>
+  <div id="container1" style="height:300px">
+    <div id="box1" class="box1">
+      <img src="http://img.mukewang.com/54447b06000171a002560191.jpg" width="256" height="191">
+    </div>
+  </div>
+
+  <div id="container2">
+    <div id="box2" class="box2">
+      <img src="http://img.mukewang.com/54447b06000171a002560191.jpg" width="256" height="191">
+    </div>
+  </div>
+  <div style="height:300px"></div>
+
+  <div id="container3">
+    <img src="http://img.mukewang.com/54447b06000171a002560191.jpg">
+    <img src="http://img.mukewang.com/54447f4a0001eb7d01910256.jpg">
+    <img src="http://img.mukewang.com/54447f550001ccb002560191.jpg">
+  </div>
+
+</html>

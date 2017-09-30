@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+     .demo1 .parent {
+       display: table-cell;
+       vertical-align: middle;
+       height: 200px;
+       border: 1px solid red;
+     }
+
+     .demo2 .parent {
+       position: relative;
+       height: 200px;
+       width: 200px;
+       border: 1px solid red;
+     }
+     .demo2 .child {
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+     }
+
+     .demo3 .parent {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 200px;
+       width: 200px;
+       border: 1px solid red;
+     }
+  </style>
+</head>
+
+<body>
+
+  <div class="demo1">
+    <div class="parent">
+        vertical-align
+    </div>
+  </div>
+
+  <div class="demo2">
+    <div class="parent">
+      <div class="child">absolute+transform</div>
+    </div>
+  </div>
+
+  <div class="demo3">
+    <div class="parent">
+      <div class="child">absolute+transform</div>
+    </div>
+  </div>
+
+</body>
+</html>
