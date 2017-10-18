@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 60px;
+      background: #ddd;
+      position: relative;
+    }
+
+    #demo1 {
+      border-left: 5px solid deeppink;
+    }
+
+    #demo2::after{
+      content: "";
+      width: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 60px;
+      background: deeppink;
+    }
+
+    #demo3 {
+      box-shadow: 5px 0px 0 0 deeppink inset;
+    }
+
+    #demo4 {
+      box-shadow: -5px 0px 0 0 deeppink;
+    }
+
+
+
+  </style>
+</head>
+<body>
+<div id="demo1"></div>
+<br>
+<div id="demo2"></div>
+<br>
+<div id="demo3"></div>
+<br>
+<div id="demo4"></div>
+<br>
+<div id="demo5"></div>
+</body>
+</html>

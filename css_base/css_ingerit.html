@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      #demo1 div {
+        margin: 50px auto 200px;
+        width: 200px;
+        height: 200px;
+        background-image: url('http://images2015.cnblogs.com/blog/608782/201609/608782-20160926101029078-1479229145.jpg');
+      }
+      #demo1 .below {
+        -webkit-box-reflect: below;
+      }
+      #demo2 {
+        margin: 50px auto;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background-image: url('http://images2015.cnblogs.com/blog/608782/201609/608782-20160926101029078-1479229145.jpg');
+      }
+      #demo2::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        bottom: -100%;
+        background-image: inherit;
+        transform: rotateX(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo1">
+      <div class='below'>below</div>
+    </div>
+    <br>
+
+    <div id="demo2">below</div>
+
+  </body>
+</html>

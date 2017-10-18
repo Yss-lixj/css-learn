@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用list实现trees</title>
+    <style>
+      ul.tree,
+      ul.tree ul {
+        list-style-type: none;
+        background: url("http://odyniec.net/articles/turning-lists-into-trees/vline.png") repeat-y;
+        padding: 0;
+        margin: 0;
+      }
+      ul.tree ul {
+        margin-left: 10px;
+      }
+      ul.tree li {
+        margin: 0;
+        padding: 0 12px;
+        line-height: 20px;
+        background: url("http://odyniec.net/articles/turning-lists-into-trees/node.png") no-repeat;
+        color: #369;
+        font-weight: bold;
+      }
+
+      ul.tree li:last-child {
+        background: #fff url(http://odyniec.net/articles/turning-lists-into-trees/lastnode.png) no-repeat;
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul class="tree">
+      <li>Animals
+        <ul>
+          <li>Birds</li>
+          <li>Mammals
+            <ul>
+              <li>Elephant</li>
+              <li class="last">Mouse</li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+      <li>Plants
+        <ul>
+          <li>Flowers
+            <ul>
+              <li>Rose</li>
+              <li class="last">Tulip</li>
+            </ul>
+          </li>
+          <li class="last">Trees</li>
+        </ul>
+      </li>
+    </ul>
+
+  </body>
+</html>
