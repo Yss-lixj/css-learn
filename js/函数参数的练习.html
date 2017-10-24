@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+      function max(a, b) {
+        console.log(arguments);
+        console.log(arguments.length); //实参的个数
+        for (var i = 0; i < arguments.length; i++) {
+          console.log(arguments[i]);
+        }
+        if (a > b) {
+          return a;
+        } else {
+          return b;
+        }
+      }
+
+      console.log(max.length); //形参的个数
+
+      console.log(max(9, 10));
+      console.log(max(9));
+      console.log(max(4, 8, 10));
+
+      function mymax() {
+        if (arguments.length <= 0) {
+          return NaN;
+        }
+        var max = arguments[0];
+        for (var i = 1; i < arguments.length; i++) {
+          if(max < arguments[i]){
+            max = arguments[i];
+          }
+        }
+        return max;
+      }
+
+      console.log(mymax(5,10,20,500));
+    </script>
+  </head>
+  <body></body>
+</html>
